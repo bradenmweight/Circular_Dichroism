@@ -49,7 +49,7 @@ and
 ```math
 \mu_{0\alpha}^\mathrm{mag} = \mathrm{Tr}[\hat{\mu}^\mathrm{mag}~\hat{\xi}_{0\alpha}] = \int d\boldsymbol{r} \mu^\mathrm{mag}(\boldsymbol{r})~\xi_{0\alpha}(\boldsymbol{r}) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~(\boldsymbol{r}\times \boldsymbol{\hat{\nabla}})~\psi_0(\boldsymbol{r})
 ```
-where $\xi_{0\alpha}(r,r') = \psi_\alpha(r)\psi_0(r')$ is the one-particle transition density matrix between the ground $0$ and excited state $\alpha$. In linear-response TDDFT, the transition density $\xi_{0\alpha} = X + Y$ where $| X,Y\rangle$ is the eigenvector of the RPA operator which satisfy,
+where $\xi_{0\alpha}(r,r') = \psi_\alpha(r)^{*}\psi_0(r')$ is the one-particle transition density matrix between the ground $0$ and excited state $\alpha$. In linear-response TDDFT, the transition density $\xi_{0\alpha} = X + Y$ where $| X,Y\rangle$ is the eigenvector of the RPA operator which satisfy,
 ```math
 \begin{bmatrix}
 A & B\\
