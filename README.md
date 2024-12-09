@@ -49,7 +49,7 @@ and
 ```math
 \mu_{0\alpha}^\mathrm{mag} = \mathrm{Tr}[\hat{\mu}^\mathrm{mag}~\hat{\xi}_{0\alpha}] = \int d\boldsymbol{r} \mu^\mathrm{mag}(\boldsymbol{r})~\xi_{0\alpha}(\boldsymbol{r}) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~(\boldsymbol{r}\times \boldsymbol{\hat{\nabla}})~\psi_0(\boldsymbol{r})
 ```
-where $\xi_{0\alpha}(r,r') = \psi_\alpha(r)^{*}\psi_0(r')$ is the one-particle transition density matrix between the ground $0$ and excited state $\alpha$. In linear-response TDDFT, the transition density $\xi_{0\alpha} = X + Y$ where $| X,Y\rangle$ is the eigenvector of the RPA operator which satisfy,
+where $\xi_{0\alpha}(r,r') = \psi_\alpha^*(r)\psi_0(r')$ is the one-particle transition density matrix between the ground $0$ and excited state $\alpha$. In linear-response TDDFT, the transition density $\xi_{0\alpha} = X + Y$ where $| X,Y\rangle$ is the eigenvector of the RPA operator which satisfy,
 ```math
 \begin{bmatrix}
 A & B\\
@@ -96,7 +96,7 @@ where $\xi_{\mu\nu}^{0\alpha} = \sum_ i^{N_\mathrm{occ}} \sum_ a^{N_\mathrm{vir 
 \langle \psi_\alpha | \vec{\hat{\mu}}^\mathrm{el} | \psi_0 \rangle &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{el})_{\mu\nu}~\xi_{\mu\nu}^{0\alpha}\\ &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{el})_{\mu\nu}~(X_{\mu\nu}^{0\alpha} + Y_{\mu\nu}^{0\alpha})\nonumber\\\langle \psi_\alpha | \vec{\hat{\mu}}^\mathrm{mag} | \psi_0 \rangle &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{mag})_{\mu\nu}~\xi_{\mu\nu}^{0\alpha}\\&= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{mag})_{\mu\nu}~(X_{\mu\nu}^{0\alpha} - Y_{\mu\nu}^{0\alpha})\nonumber
 \end{align}
 ```
-Since the electronic dipole operator is Hermitian, i.e., $\mu^\mathrm{el}_{\mu\nu} = \mu^\mathrm{el}_{\nu\mu}$, the density required is $X + Y$ while for the magnetic dipole operator, which is anti-Hermitian, i.e., $\mu^\mathrm{el}_{\mu\nu} = -\mu^\mathrm{el}_{\nu\mu}~$, $X-Y$ is required. (BMW s~ Are there any tricks to get around having to know whether the operator is hermi or not ?)
+Since the electronic dipole operator is Hermitian, i.e., $\mu_{\mu\nu}^\mathrm{el} = \mu_{\nu\mu}^\mathrm{el}$, the density required is $X + Y$ while for the magnetic dipole operator, which is anti-Hermitian, i.e., $\mu_{\mu\nu}^\mathrm{el} = -\mu_{\nu\mu}^\mathrm{el}~$, $X-Y$ is required. (BMW ~ Are there any tricks to get around having to know whether the operator is hermi or not ?)
 
 ## Real-space Projected Transition and Dipole Density
 The elements of the transition dipole matrix in the real-space representation can be written as a 6D-object,
