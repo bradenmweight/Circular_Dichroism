@@ -5,7 +5,7 @@
 Electric Dipole Moment:
 ```math
 \hat{\mu}^\mathrm{el} = -\sum_{j}^{N_\mathrm{el}} {\bf \hat{r}}_j + \sum_{J}^{N_\mathrm{ions}} Z_J {\bf R}_J \otimes \mathbb{I}_\mathrm{el}
-```math
+```
 
 Magnetic Dipole Moment:
 ```math
