@@ -100,16 +100,16 @@ Since the electronic dipole operator is Hermitian, i.e., $\mu_{\mu\nu}^\mathrm{e
 
 ## Real-space Projected Transition and Dipole Density
 The elements of the transition dipole matrix in the real-space representation can be written as a 6D-object,
-$$
+```math
 \xi(x,y,z,x',y',z') = \sum_{\mu\nu}^{N_\mathrm{AO}}\langle x y z | \mu \rangle~\xi_{\mu\nu}~\langle \nu | x' y' z' \rangle.
-$$
+```
 Taking only the diagonal elements, such that $|x'y'z'\rangle = |xyz\rangle$, we get $\xi(x,y,z)$, a 3D object. This 3D object is natural to cast as an isosurface (volumetric data), in a similar way as molecular orbitals, total density, or electrostatic potentials are visualized. Furthermore, one can also generate the volumetric data for any observable by simply not performing the trace and taking only the diagonal elements of the Eq. 7.
-$$
+```math
 \begin{align}
 \vec{\mu}_{0\alpha}^\mathrm{el}(x,y,z) &= \sum_{\mu\nu\gamma}^{N_\mathrm{AO}}\langle x y z | \mu \rangle~\vec{\mu}_{\mu\nu}^\mathrm{el}~\xi^{0\alpha}_{\nu\gamma}~\langle \gamma | xyz \rangle\\
 \vec{\mu}_{0\alpha}^\mathrm{mag}(x,y,z) &= \sum_{\mu\nu\gamma}^{N_\mathrm{AO}}\langle x y z | \mu \rangle~\vec{\mu}_{\mu\nu}^\mathrm{mag}~\xi^{0\alpha}_{\nu\gamma}~\langle \gamma | xyz \rangle
 \end{align}
-$$
+```
 
 ## Natural transition orbitals (NTOs) 
 NTOs can be easily constructed by diagonalizing (i.e., in general SVD) the transition density matrix in the MO representation to obtain 
