@@ -73,12 +73,14 @@ where $\xi_{\mu\nu}^{0\alpha} = \sum_ i^{N_\mathrm{occ}} \sum_ a^{N_\mathrm{vir 
 
 
 ## Calculating Electronic and Magnetic Transition Dipoles
+$$
 \begin{align}
 \langle \psi_\alpha | \vec{\hat{\mu}}^\mathrm{el} | \psi_0 \rangle &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{el})_{\mu\nu}~\xi_{\mu\nu}^{0\alpha}\\ 
 &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{el})_{\mu\nu}~(X_{\mu\nu}^{0\alpha} + Y_{\mu\nu}^{0\alpha})\nonumber\\
 \langle \psi_\alpha | \vec{\hat{\mu}}^\mathrm{mag} | \psi_0 \rangle &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{mag})_{\mu\nu}~\xi_{\mu\nu}^{0\alpha}\\
 &= \sum_{\mu\nu}^{N_\mathrm{AO}} (\vec{\hat{\mu}}^\mathrm{mag})_{\mu\nu}~(X_{\mu\nu}^{0\alpha} - Y_{\mu\nu}^{0\alpha})\nonumber
 \end{align}
+$$
 Since the electronic dipole operator is Hermitian, i.e., $\mu^\mathrm{el}_{\mu\nu} = \mu^\mathrm{el}_{\nu\mu}~$, the density required is $X + Y$ while for the magnetic dipole operator, which is anti-Hermitian, i.e., $\mu^\mathrm{el}_{\mu\nu} = -\mu^\mathrm{el}_{\nu\mu}~$, $X-Y$ is required. (BMW s~ Are there any tricks to get around having to know whether the operator is hermi or not ?)
 
 ## Real-space Projected Transition and Dipole Density
