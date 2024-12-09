@@ -21,7 +21,7 @@ f_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{\al
 
 Rotary Strength: 
 ```math
-R_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}^\mathrm{el} \cdot \hat{\mu}^\mathrm{mag},
+R_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{0\alpha}^\mathrm{mag},
 ```
 where $E_{0\alpha} = E_\alpha - E_0$.
 
