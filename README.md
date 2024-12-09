@@ -16,10 +16,13 @@ Note: $\hat{p}_x = -i\hbar \hat{\nabla}_x$
 
 Oscillator Strength:
 ```math
-f_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{\alpha 0}^\mathrm{el}$$
+f_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{\alpha 0}^\mathrm{el}
 ```
 
-Rotary Strength: $$R_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}^\mathrm{el} \cdot \hat{\mu}^\mathrm{mag},$$ where $E_{0\alpha} = E_\alpha - E_0$
+Rotary Strength: 
+```math
+R_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}^\mathrm{el} \cdot \hat{\mu}^\mathrm{mag}, where $E_{0\alpha} = E_\alpha - E_0$
+```
 
 Absorption Spectroscopy:
 ```math
