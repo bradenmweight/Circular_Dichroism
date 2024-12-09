@@ -3,36 +3,54 @@
 
 ## Theory
 Electric Dipole Moment:
-$\hat{\mu}^\mathrm{el} = -\sum_{j}^{N_\mathrm{el}} {\bf \hat{r}}_j + \sum_{J}^{N_\mathrm{ions}} Z_J {\bf R}_J \otimes \mathbb{I}_\mathrm{el}$
+```math
+\hat{\mu}^\mathrm{el} = -\sum_{j}^{N_\mathrm{el}} {\bf \hat{r}}_j + \sum_{J}^{N_\mathrm{ions}} Z_J {\bf R}_J \otimes \mathbb{I}_\mathrm{el}
+```math
 
 Magnetic Dipole Moment:
-$\hat{\mu}^\mathrm{mag} = -\sum_{j}^{N_\mathrm{el}} {\bf \hat{r}}_j \times \frac{i}{\hbar}{\bf \hat{p}}_j$
+```math
+\hat{\mu}^\mathrm{mag} = -\sum_{j}^{N_\mathrm{el}} {\bf \hat{r}}_j \times \frac{i}{\hbar}{\bf \hat{p}}_j
+```
 
 Note: $\hat{p}_x = -i\hbar \hat{\nabla}_x$
 
-Oscillator Strength: $$f_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{\alpha 0}^\mathrm{el}$$
+Oscillator Strength:
+```math
+f_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}_{0\alpha}^\mathrm{el} \cdot \hat{\mu}_{\alpha 0}^\mathrm{el}$$
+```
 
 Rotary Strength: $$R_{0\alpha} = 2 E_{0\alpha}~\hat{\mu}^\mathrm{el} \cdot \hat{\mu}^\mathrm{mag},$$ where $E_{0\alpha} = E_\alpha - E_0$
 
-Absorption Spectroscopy: $$\begin{align}
+Absorption Spectroscopy:
+```math
+\begin{align}
 \mathrm{ABS}(E) &= \sum_\alpha f_{0\alpha}~\delta(E - E_{0\alpha})\\
 &\approx \sum_\alpha f_{0\alpha} \mathrm{e}^{-\frac{(E - E_{0\alpha})^2}{2\sigma^2}}\\
 &\approx \sum_\alpha f_{0\alpha}~\frac{\frac{\sigma^2}{4}}{(E - E_{0\alpha})^2 + (\frac{\sigma}{2})^2}
-\end{align}$$
+\end{align}
+```
 
-Circular Dichroism Spectroscopy:  $$\begin{align}
+Circular Dichroism Spectroscopy:
+```math
+\begin{align}
 \mathrm{CD}(E) &= \sum_\alpha R_{0\alpha}~\delta(E - E_{0\alpha})\\
 &\approx \sum_\alpha R_{0\alpha} \mathrm{e}^{-\frac{(E - E_{0\alpha})^2}{2\sigma^2}}\\
 &\approx \sum_\alpha R_{0\alpha}~\frac{\frac{\sigma^2}{4}}{(E - E_{0\alpha})^2 + (\frac{\sigma}{2})^2},
-\end{align}$$ where $\sigma$ is a finite broadening parameter
+\end{align}
+```
+where $\sigma$ is a finite broadening parameter
 
 ## The Fermionic RPA Solution
 Practically speaking, 
-$$\boldsymbol{\mu}_{0\alpha}^\mathrm{el} = \mathrm{Tr}[\hat{\mu}^\mathrm{el}~\hat{\xi}_{0\alpha}] = \int dr \mu^\mathrm{el}(r)~\xi_{0\alpha}(r) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~\boldsymbol{r}~\psi_0(\boldsymbol{r}')$$ 
+```math
+\boldsymbol{\mu}_{0\alpha}^\mathrm{el} = \mathrm{Tr}[\hat{\mu}^\mathrm{el}~\hat{\xi}_{0\alpha}] = \int dr \mu^\mathrm{el}(r)~\xi_{0\alpha}(r) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~\boldsymbol{r}~\psi_0(\boldsymbol{r}')
+```
 and 
-$$\mu_{0\alpha}^\mathrm{mag} = \mathrm{Tr}[\hat{\mu}^\mathrm{mag}~\hat{\xi}_{0\alpha}] = \int d\boldsymbol{r} \mu^\mathrm{mag}(\boldsymbol{r})~\xi_{0\alpha}(\boldsymbol{r}) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~(\boldsymbol{r}\times \boldsymbol{\hat{\nabla}})~\psi_0(\boldsymbol{r})$$
+```math
+\mu_{0\alpha}^\mathrm{mag} = \mathrm{Tr}[\hat{\mu}^\mathrm{mag}~\hat{\xi}_{0\alpha}] = \int d\boldsymbol{r} \mu^\mathrm{mag}(\boldsymbol{r})~\xi_{0\alpha}(\boldsymbol{r}) = \int d\boldsymbol{r}~\psi^*_\alpha(\boldsymbol{r})~(\boldsymbol{r}\times \boldsymbol{\hat{\nabla}})~\psi_0(\boldsymbol{r})
+```
 where $\xi_{0\alpha}(r,r') = \psi^*_\alpha(r)\psi_0(r')$ is the one-particle transition density matrix between the ground $0$ and excited state $\alpha$. In linear-response TDDFT, the transition density $\xi_{0\alpha} = X + Y$ where $| X,Y\rangle$ is the eigenvector of the RPA operator which satisfy,
-$$
+```math
 \begin{bmatrix}
 A & B\\
 -A^* & -B^*
@@ -49,24 +67,24 @@ Y
 X\\
 Y
 \end{bmatrix}
-$$
+```
 Here, $\omega_{0\alpha}$ is the ground-to-excited transition energy and $|\xi^{0 \alpha}\rangle \equiv | X^{0 \alpha}, Y^{0 \alpha} \rangle$ can be interpreted as excitation and de-excitation vectors of the $0\rightarrow\alpha_\mathrm{th}$ electronic transition. The normalization can be written as $\langle\xi^{0 \alpha}|\xi^{0 \beta}\rangle = \langle X^{0 \alpha} | X^{0 \beta}\rangle - \langle Y^{0 \alpha} | Y^{0 \beta}\rangle= \delta_{\alpha\beta}$.
 
 Importantly, the RPA eigenvalue equation can be re-cast into a different form as,
-$$
+```math
 (A + B) (A - B) (X^{0\alpha} - Y^{0\alpha}) = \omega_{0\alpha} (X^{0\alpha} - Y^{0\alpha})
-$$
+```
 whose normalization is then defined as $\langle z^{0\alpha} | z^{0\beta} \rangle= \langle X^{0\alpha} - Y^{0\alpha} | X^{0\beta} - Y^{0\beta} \rangle = \delta_{\alpha\beta}$, where $|z^{0\alpha}\rangle = | X^{0\alpha} - Y^{0\alpha} \rangle$.
 
 ## Matrix Elements of an Observable
 To find expectation values (needed for transition properties), one must perform the trace of the operator with the transition densities as,
-$$
+```math
 \begin{align}
 \langle \psi_\alpha | \hat{O} | \psi_0 \rangle &= \mathrm{Tr}\big[ \hat{O}~\xi^{0\alpha} \big]\\
 &= \sum_i^{N_\mathrm{occ}}\sum_a^{N_\mathrm{vir}} O_{ia}~\xi_{ia}^{0\alpha}\nonumber\\
 &= \sum_{\mu\nu}^{N_\mathrm{AO}} O_{\mu\nu}~\xi_{\mu\nu}^{0\alpha}\nonumber
 \end{align}
-$$
+```
 where $\xi_{\mu\nu}^{0\alpha} = \sum_ i^{N_\mathrm{occ}} \sum_ a^{N_\mathrm{vir }}C_{\mu i}~\xi_{ia}^{0\alpha}~C_{\nu a}$ is the atomic orbital representation of the transition density matrix and $\{C_{\mu i}\}$ are the molecular orbitals in the basis of the atomic orbitals.
 
 
