@@ -113,13 +113,13 @@ Taking only the diagonal elements, such that $|x'y'z'\rangle = |xyz\rangle$, we 
 
 ## Natural transition orbitals (NTOs) 
 NTOs can be easily constructed by diagonalizing (i.e., in general SVD) the transition density matrix in the MO representation to obtain 
-$$
+```math
 \begin{align}
 \xi^{0\alpha}_{ia} &= \sum_s^{N_\mathrm{occ}\times N_\mathrm{vir}} U^{0\alpha}_{ia,s}~\lambda_s^{0\alpha}~V^{0\alpha}_{ia,s}\\
 \mathrm{NTO}^{0\alpha}_{s} &= \sum_{i}^{N_\mathrm{occ}}\sum_a^{N_\mathrm{vir}} U_{ia,s}^{0\alpha} \ \ \ (\mathrm{Occupied})\\
 \mathrm{NTO}^{0\alpha}_{s} &= \sum_{i}^{N_\mathrm{occ}}\sum_a^{N_\mathrm{vir}} V_{ia,s}^{0\alpha} \ \ \ (\mathrm{Virtual})
 \end{align}
-$$
+```
 
 ## Instructions for Gaussian16 + MultiWfn
 ```
